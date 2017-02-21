@@ -15,45 +15,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
 
 public class Sample {
 
-	/**
-	 * @param args
-	 * @throws InterruptedException
-	 * @throws IOException
-	 */
-	/**
-	 * @param args
-	 * @throws InterruptedException
-	 * @throws IOException
-	 */
-	/**
-	 * @param args
-	 * @throws InterruptedException
-	 * @throws IOException
-	 */
-	/**
-	 * @param args
-	 * @throws InterruptedException
-	 * @throws IOException
-	 */
-	/**
-	 * @param args
-	 * @throws InterruptedException
-	 * @throws IOException
-	 */
-	/**
-	 * @param args
-	 * @throws InterruptedException
-	 * @throws IOException
-	 */
-	/**
-	 * @param args
-	 * @throws InterruptedException
-	 * @throws IOException
-	 */
-	public static void main(String[] args) throws InterruptedException, IOException {
+	@Test
+public void test() throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
 		
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
@@ -97,7 +64,7 @@ public class Sample {
 		
 		 
 		 //driver.findElementByXPath("//input[@id='UserFirstName']").sendKeys("vignesh");
-		  driver.findElementByLinkText("Start free trial ›").click();
+		  driver.findElementByLinkText("Start free trial ï¿½").click();
 		
 		
 		
