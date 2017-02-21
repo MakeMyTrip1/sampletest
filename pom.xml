@@ -86,7 +86,7 @@
 							<from>gsr170493@gmail.com</from>
 							<subject>Automation test report</subject>
 							<failonerror>true</failonerror>
-							<mailhost>gsr170493@gmail.com</mailhost>
+							<mailhost>smtp.gmail.com</mailhost>
 							<mailuser>gsr170493@gmail.com</mailuser>
 							<mailpassword>gsr@123456789</mailpassword>							
 							<receivers>
