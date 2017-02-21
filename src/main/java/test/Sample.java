@@ -54,17 +54,17 @@ public void test() throws InterruptedException, IOException {
 		  String signupWindow=it.next();
 
 		  driver.switchTo().window(signupWindow);*/
-		 Set<String> windows=driver.getWindowHandles();
+		/* Set<String> windows=driver.getWindowHandles();
 		 for (String window : windows) {
 			 
 			 driver.switchTo().window(window);
 			 
 			
 		}
-		
+		*/
 		 
 		 //driver.findElementByXPath("//input[@id='UserFirstName']").sendKeys("vignesh");
-		  driver.findElementByLinkText("Start free trial �").click();
+//		  driver.findElementByLinkText("Start free trial �").click();
 		
 		
 		
@@ -143,8 +143,8 @@ public void test() throws InterruptedException, IOException {
 		//driver.manage().deleteAllCookies();
 		//driver.close();
 
-		FileInputStream fis = new FileInputStream(new File("./data/office.xlsx"));
-		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+	/*	FileInputStream fis = new FileInputStream(new File("./data/office.xlsx"));
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);*/
 		
 		
 	}
