@@ -70,38 +70,6 @@
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
-
-			<plugin>
-				<groupId>ch.fortysix</groupId>
-				<artifactId>maven-postman-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>send a mail</id>
-						<phase>package</phase>
-						<goals>
-							<goal>send-mail</goal>
-						</goals>
-						<inherited>false</inherited>
-						<configuration>
-							<from>gsr170493@gmail.com</from>
-							<subject>Automation test report</subject>
-							<failonerror>true</failonerror>
-							
-							<mailuser>gsr170493@gmail.com</mailuser>
-							<mailpassword>gsr@123456789</mailpassword>							
-							<receivers>
-								<receiver>Vignesh Kumarasubramanian</receiver>
-								<receiver>Vignesh.Kumarasubramanian@gsr-inc.com</receiver>
-							</receivers>
-							<fileSets>
-								<fileSet>
-									<directory>C:\\Users\\vignesh.k\\.jenkins\\workspace\\sampleTrip\\target\\surefire-reports\\emailable-report.html</directory>									
-								</fileSet>
-							</fileSets>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 		<finalName>MakeMyTrip</finalName>
 	</build>
