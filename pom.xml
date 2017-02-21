@@ -1,9 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>sample</groupId>
-  <artifactId>test</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  	<properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>sample</groupId>
+	<artifactId>test</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
@@ -45,6 +46,7 @@
 			<artifactId>testng</artifactId>
 			<version>6.10</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -64,9 +66,41 @@
 				<version>2.17</version>
 				<configuration>
 					<suiteXmlFiles>
-						 <file>src/main/resources/testng.xml</file>
+						<file>src/main/resources/testng.xml</file>
 					</suiteXmlFiles>
 				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>ch.fortysix</groupId>
+				<artifactId>maven-postman-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>send a mail</id>
+						<phase>package</phase>
+						<goals>
+							<goal>send-mail</goal>
+						</goals>
+						<inherited>false</inherited>
+						<configuration>
+							<from>gsr170493@gmail.com</from>
+							<subject>Automation test report</subject>
+							<failonerror>true</failonerror>
+							<mailhost>gsr170493@gmail.com</mailhost>
+							<mailuser>gsr170493@gmail.com</mailuser>
+							<mailpassword>gsr@123456789</mailpassword>							
+							<receivers>
+								<receiver>Vignesh Kumarasubramanian</receiver>
+								<receiver>Vignesh.Kumarasubramanian@gsr-inc.com</receiver>
+							</receivers>
+							<fileSets>
+								<fileSet>
+									<directory>C:\\Users\\vignesh.k\\.jenkins\\workspace\\sampleTrip\\target\\surefire-reports\\emailable-report.html</directory>									
+								</fileSet>
+							</fileSets>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 		<finalName>MakeMyTrip</finalName>
